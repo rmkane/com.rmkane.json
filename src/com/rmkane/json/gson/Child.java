@@ -3,27 +3,27 @@ package com.rmkane.json.gson;
 public class Child {
 
 	String date_added, id, name, type;
-	
+
 	public Child() {
 		setDate_added("");
-	  setId("");
-	  setName("");
-	  setType("");
+		setId("");
+		setName("");
+		setType("");
 	}
-	
+
 	public Child(String name) {
-	  setDate_added("");
-	  setId("");
-	  setName(name);
-	  setType("url");
-  }
+		setDate_added("");
+		setId("");
+		setName(name);
+		setType("url");
+	}
 
 	public Child(String date_added, String id, String name, String type) {
-	  setDate_added(date_added);
-	  setId(id);
-	  setName(name);
-	  setType(type);
-  }
+		setDate_added(date_added);
+		setId(id);
+		setName(name);
+		setType(type);
+	}
 
 	public String getDate_added() {
 		return date_added;
@@ -58,8 +58,8 @@ public class Child {
 	}
 
 	@Override
-  public String toString() {
-	  return "'child': {date_added='" + date_added + "', id='" + id + "', name='"
-	      + name + "', type='" + type + "'}";
-  }
+	public String toString() {
+		return "'child': {date_added='" + date_added + "', id='" + id
+				+ "', name='" + name + "', type='" + type + "'}";
+	}
 }
