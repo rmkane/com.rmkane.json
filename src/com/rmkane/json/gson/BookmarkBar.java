@@ -1,24 +1,22 @@
 package com.rmkane.json.gson;
 
-public class BookmarkBar extends Folder {
+import java.util.ArrayList;
+
+public class BookmarkBar extends Child {
 
 	public BookmarkBar() {
-		super();
-		setName("Bookmarks bar");
-		setType("folder");
+		super("folder", "Bookmarks bar");
 	}
 	
-	public BookmarkBar(Children children) {
-		super();
+	public BookmarkBar(ArrayList<Child> children) {
+		super("folder", "Bookmarks bar");
 		setChildren(children);
-		setName("Bookmarks bar");
 		setType("folder");
 		
 	}
 	
-	public BookmarkBar (Children children, String date_added, String date_modified,
-	    String id, String name, String type) {
-		super(children, date_added, date_modified, id, name, type);
+	public BookmarkBar (String date_added, String id, String name, String type, String url, String date_modified, ArrayList<Child> children) {
+		super(date_added, id, name, type, null, date_modified, children);
 	}
 
 	@Override

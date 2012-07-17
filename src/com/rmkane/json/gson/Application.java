@@ -1,5 +1,7 @@
 package com.rmkane.json.gson;
 
+import java.util.ArrayList;
+
 public class Application {
 	
 	public static void main(String... args) {
@@ -41,11 +43,14 @@ public class Application {
 		BookmarkManager bm = json.fromJson(bookmarks, BookmarkManager.class);
 		Roots r = bm.getRoots();
 		BookmarkBar bb = r.getBookmark_bar();
-		Children bc = bb.getChildren();
-		Folder c1 = (Folder)bc.get(0);
-		Folder f1;
+		ArrayList<Child> c1 = bb.getChildren();
+		Child c2 = c1.get(3);
+		ArrayList<Child> c3 = c2.getChildren();
+		Child c4 = c3.get(4);
+		System.out.println(c4);
 		
-		System.out.println(c1);
+		String jsonString = json.toJson(c4);
+		System.out.println(jsonString);
 	}
 
 	public static String getBookmarks() {
